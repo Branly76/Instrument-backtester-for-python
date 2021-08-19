@@ -13,3 +13,21 @@ The main characteristics of the BT are:
  - All time frames are deducted from these M1 bars (M5, M10, M15, M20, M30, H1, H2, H3, H4, H6, H8, H12, D1)
  - Stepping through the history in M1 bar increment or multiple M1 bar increments.
  - Orders and positions will be updated every increment.
+ - Opening & closing of trades (pendings, market).
+ - Orders and positions will be updated every increment.
+ - Tracking of minimum and maximum profit of open positions.
+ - Additional comments for trades, like open conditions and/or close conditions.
+
+Planned:
+ - Renko bars and volume bars
+ - Red news (FF).
+
+
+The communication is based on sockets. The BT is the server and a python script is the client.
+The communication with the BT server is all done in a python script "*Pytrader_BT_V1_01.py*" by easy to understand function calls.
+
+Extended documentation is available and also a "*Demo_BT.py*" in which it is easy to see how to use the system.
+
+There is also a [discord channel](https://discord.gg/zWaBpz3S) for support.
+
+This is a licensed product. In demo EURUSD, USDJPY and AUDNZD work in full function.
