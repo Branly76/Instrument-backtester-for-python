@@ -25,7 +25,7 @@ Planned:
 The communication is based on sockets(server/client). The BT is the server and a python script is the client.
 The communication with the BT server is all done in a python script "*Pytrader_BT_V1_01.py*" by easy to understand function calls.
 
-For switching to live trading a Pytrader_API for MT4 and MT5 are available.
+For switching to live trading a "*Pytrader_API*" for MT4 and MT5 are available. Function calls are for 95% the same.
 
 Extended documentation is available and also a "*Demo_BT.py*" in which it is easy to see how to use the system.
 
