@@ -3,7 +3,7 @@ import pandas as pd
 import configparser
 from datetime import datetime
 import pytz
-from utils.Pytrader_BT_API_V1_00 import Pytrader_BT_API
+from utils.Pytrader_BT_API_V1_01 import Pytrader_BT_API
 from utils.Pytrader_API_V1_06a import Pytrader_API
 
 from utils.utils import Timer
@@ -27,7 +27,8 @@ timeframe_list = ['M1', 'M15', 'H1']
 # broker instrument lookup list, just for compatibility
 brokerInstrumentsLookup = {
     'EURUSD': 'EURUSD',
-    'GBPNZD': 'GBPNZD',
+    'AUDNZD': 'AUDNZD',
+    'USDJPY': 'USDJPY',
     'GOLD': 'XAUUSD',
     'DAX': 'GER30'}
 
@@ -51,7 +52,7 @@ license = MT_Back.Check_license(server = '127.0.0.1', port = 5555)
 print(license)
 
 # reset of backtester
-ok = MT_Back.Reset_Backtester()
+ok = MT_Back.Reset_backtester()
 if (ok == False):
     log.debug('Error in resetting the back tester')
     log.debug(MT_Back.command_return_error)
@@ -59,13 +60,17 @@ if (ok == False):
 
 # the back tester has no account at start, so we have to set a value
 # margin call is not used at the moment
-ok = MT_Back.Set_account_characteristics(balance = 1000.0, max_pendings = 50, margin_call= 50.0)
+ok = MT_Back.Set_account_parameters(balance = 1000.0, max_pendings = 50, margin_call= 50.0)
 
 # set the directory of the M1 data files, In this directory the back trader will look for the M1 data files
 ok = MT_Back.Set_data_directory(data_directory='C:\\Temp\\Bar_files')
 if (ok == False):
     log.debug('Error in setting data directory')
     log.debug(MT_Back.command_return_error)
+
+# set the comma or dot annotation.
+# depending on your country / region reals are written with a dot or a comma
+ok = MT_Back.Set_comma_or_dot(mode='comma')    
 
 # set the instruments to trade, this will take a while depending on the number of instruments and the size of the datafiles
 # Only if M1 datafiles are synchronized more the one instrument should be defined
@@ -97,16 +102,12 @@ for _instrument in _instrument_list:
 MT.Disconnect()
 
 
-# set the comma or dot annotation.
-# depending on your country / region reals are written with a dot or a comma
-ok = MT_Back.Set_comma_or_dot(mode='comma')
-
 # set the time frames, like described above
 ok = MT_Back.Set_timeframes(timeframe_list=timeframe_list)
 
 # if you like to run more times the startegy and you do now want to start from the beginning, use this function.
 # only the raw M1 data will be kept. all other info/pointers/... will be reset
-ok = MT_Back.Reset_Backtester_pointers()                                                                    # keep the input of bars, and instrument information
+ok = MT_Back.Reset_backtester_pointers()                                                                    # keep the input of bars, and instrument information
 
 # if we want to know how many M1 bars the backtester has in history and the dates of the first and last bar
 # we can call this function
