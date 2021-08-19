@@ -28,7 +28,7 @@ The communication with the BT server is all done in a python script "*Pytrader_B
 For switching to live trading a "*Pytrader_API*" for MT4 and MT5 are available. Function calls are for 95% the same.
 For more information see [here](https://github.com/TheSnowGuru/PyTrader-python-mt4-mt5-trading-api-connector-drag-n-drop)
 
-Extended documentation is available and also a "*Demo_BT.py*" in which it is easy to see how to use the system.
+Extended documentation is available and also a "*BT_Demo.py*" in which it is easy to see how to use the system.
 
 There is also a [discord channel](https://discord.gg/zWaBpz3S) for support.
 
