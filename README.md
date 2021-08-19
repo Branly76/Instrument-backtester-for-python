@@ -1,6 +1,7 @@
 
 
 **Instrument backtester (BT)**
+
 The Instrument backtester(BT) is a windows console application, which acts as  a MT4/MT5 terminal.
 The main characteristics of the BT are:
 
