@@ -32,4 +32,4 @@ Extended documentation is available and also a "*Demo_BT.py*" in which it is eas
 
 There is also a [discord channel](https://discord.gg/zWaBpz3S) for support.
 
-This is a licensed product. In demo EURUSD, USDJPY and AUDNZD work in full function.
+This is a licensed product. In demo EURUSD, USDJPY and AUDNZD work in full function. For a license see [here](https://www.mql5.com/en/market/product/70885?source=Site+Market+MT4+Indicator+Search+Rating005%3aMT4+instrument).
