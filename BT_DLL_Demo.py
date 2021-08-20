@@ -127,7 +127,7 @@ candles['date'] = pd.to_datetime(candles['date'], unit='s')
 print(candles.tail(5))
 
 # speed test reading 1000x 100 bars and measure time elapsed
-# on this machine it takes about 1.5 seconds for 1000 reads
+# on this machine it takes about 1.3 seconds for 1000 reads
 print(datetime.now())
 for index in range (0,1000):
     candles = MT_Back.Get_last_x_bars_from_now(instrument='EURUSD', timeframe=MT_Back.get_timeframe_value('M15'), nbrofbars=100)
