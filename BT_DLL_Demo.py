@@ -33,12 +33,12 @@ brokerInstrumentsLookup = {
 
 MT = Pytrader_API()                                                                                             # for retrieving instrument information
 
-MT_Back = Pytrader_DLL_API()                                                                                     # back tester instance
+MT_Back = Pytrader_DLL_API()                                                                                    # back tester instance
 
 # connect to the back tester
 Connected = MT_Back.Connect(
-    server='127.0.0.1',
-    port=10014,
+    server='127.0.0.1',                                                                                         # compatibility
+    port=10014,                                                                                                 # compatibility
     instrument_lookup=brokerInstrumentsLookup)
 
 print(Connected)
