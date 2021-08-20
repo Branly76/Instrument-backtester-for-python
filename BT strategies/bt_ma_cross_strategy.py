@@ -83,6 +83,8 @@ if (ok == False):
     log.debug('Error in setting instruments and/or reading the datafiles')
     log.debug(MT_Back.command_return_error)
 
+# set the time frames
+ok = MT_Back.Set_timeframes(timeframe_list=timeframe_list)
 
 # at start there will be no history for bars witha period > M1.
 # depending 0n your stategy the back tester has to move formwars x M1 bars to build all the needed bars for the used time frames
@@ -107,9 +109,6 @@ for _instrument in _instrument_list:
                                     lot_stepsize=_info['lot_step'], point=_info['point'], tick_size=_info['tick_size'], tick_value=_info['tick_value'], \
                                     swap_long=_info['swap_long'], swap_short=_info['swap_short'] )
 MT.Disconnect()
-
-# set the time frames
-ok = MT_Back.Set_timeframes(timeframe_list=timeframe_list)
 
 # set spread and commission
 ok = MT_Back.Set_spread_and_commission_in_pips(instrument='EURUSD', low_spread_in_pips=0.4, high_spread_in_pips=1.2, commission_in_pips=0.4)
