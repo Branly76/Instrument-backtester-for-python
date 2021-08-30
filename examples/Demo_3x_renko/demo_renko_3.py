@@ -132,7 +132,7 @@ candles_B2.rename(columns = {'tick_volume':'volume'}, inplace = True)
 candles_B2['date'] = pd.to_datetime(candles_B2['date'], unit='s')
 
 # retrieve 100 candles for bricksize 3
-candles_B3 = MT_Back.Get_last_x_renko_bars_from_now(instrument='EURUSD', brick_code='B1', nbrofbars=100)
+candles_B3 = MT_Back.Get_last_x_renko_bars_from_now(instrument='EURUSD', brick_code='B3', nbrofbars=100)
 if type(candles_B3) != pd.DataFrame:
         candles_B3 = pd.DataFrame(candles_B3)
 candles_B3.rename(columns = {'tick_volume':'volume'}, inplace = True)
