@@ -111,6 +111,9 @@ MT.Disconnect()
 
 log.debug('Disconnected from MT terminal.')
 
+# set the bar date ascending, if data showing in graph and X-as is index needed
+ok = MT_Back.Set_bar_date_asc_desc(asc_desc=True)
+
 ok = MT_Back.Set_bartype_parameters_for_renko(brick_list_in_pips=['7.0', '10.0', '12.0'])
 log.debug('Renko brick sizes are set: ' + str(ok))
 
