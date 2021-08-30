@@ -1,6 +1,6 @@
-# Example how to use renko bars/candles in de back tester.
+# Example how to use renko bars/candles in the back tester.
 # 3 different brick sizes are defined.
-# history is build for the backtester, set 200000, to be sure for enough renk candles
+# history is build for the backtester, set 200000, to be sure for enough renko candles
 # candles are retrieved and put in plotly chart
 
 import numpy as np
