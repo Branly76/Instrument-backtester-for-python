@@ -18,7 +18,7 @@ The main characteristics of the BT are:
  - Additional comments for trades, like open conditions and/or close conditions.
 
 Planned:
- - Renko bars and volume bars
+ - Renko bars and volume bars, now implemented in version V1_02
  - Red news (FF).
 
 
