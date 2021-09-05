@@ -16,14 +16,15 @@ The main characteristics of the BT are:
  - Orders and positions will be updated every increment.
  - Tracking of minimum and maximum profit of open positions.
  - Additional comments for trades, like open conditions and/or close conditions.
+ - Renko bars
 
 Planned:
- - Renko bars and volume bars, now implemented in version V1_02
+ - Renko bars and volume bars, renko bars now implemented in version V1_02
  - Red news (FF).
 
 
 The communication is based on sockets(server/client). The BT is the server and a python script is the client.
-The communication with the BT server is all done in a python script "*Pytrader_BT_V1_01.py*" by easy to understand function calls.
+The communication with the BT server is all done in a python script "*Pytrader_BT_V1_02.py*" by easy to understand function calls.
 
 For switching to live trading a "*Pytrader_API*" for MT4 and MT5 are available. Function calls are for 95% the same.
 For more information see [here](https://github.com/TheSnowGuru/PyTrader-python-mt4-mt5-trading-api-connector-drag-n-drop)
