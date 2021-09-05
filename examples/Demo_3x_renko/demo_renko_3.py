@@ -9,7 +9,7 @@ import configparser
 from datetime import datetime
 import pytz
 from utils.api.Pytrader_BT_API_V1_02 import Pytrader_BT_API
-from utils.api.Pytrader_API_V1_06a import Pytrader_API
+from utils.api.Pytrader_API_V2_07 import Pytrader_API
 
 from utils.utils import Timer
 from utils.helper.LogHelper import Logger
