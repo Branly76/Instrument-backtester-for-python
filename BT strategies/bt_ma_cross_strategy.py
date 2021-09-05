@@ -1,6 +1,6 @@
 import pandas as pd
 import time
-# check for proper versions
+# check for proper versions and location in your project structure
 from utils.api.Pytrader_BT_API_V1_02 import Pytrader_BT_API
 from utils.api.Pytrader_API_V2_07 import Pytrader_API
 from utils.LogHelper import Logger
