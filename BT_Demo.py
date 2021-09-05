@@ -3,8 +3,9 @@ import pandas as pd
 import configparser
 from datetime import datetime
 import pytz
-from utils.Pytrader_BT_API_V1_01 import Pytrader_BT_API
-from utils.Pytrader_API_V1_06a import Pytrader_API
+# check for proper versions and location of files in project structure
+from utils.api.Pytrader_BT_API_V1_02 import Pytrader_BT_API
+from utils.api.Pytrader_API_V2_07 import Pytrader_API
 
 from utils.utils import Timer
 from utils.LogHelper import Logger
