@@ -3,8 +3,8 @@ import pandas as pd
 import configparser
 from datetime import datetime
 import pytz
-from utils.Pytrader_DLL_API_V1_01 import Pytrader_DLL_API
-from utils.Pytrader_API_V1_06a import Pytrader_API
+from utils.Pytrader_DLL_API_V1_02 import Pytrader_DLL_API
+from utils.Pytrader_API_V2_07 import Pytrader_API
 
 from utils.utils import Timer
 from utils.LogHelper import Logger
