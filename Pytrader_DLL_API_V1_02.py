@@ -5,7 +5,7 @@ from datetime import datetime
 
 import clr                                                                                          # install pythonnet "pip install pythonnet"
 
-clr.AddReference('C:\\Program Files (x86)\\BranlyCo\\Setup_BT_DLL_V1_02\\BT_DLL_V1_02.dll')     # path to the installed dll
+clr.AddReference('C:\\Program Files (x86)\\BranlyCo\\Setup_BT_DLL_V1_02\\BT_DLL_V1_02.dll')         # path to the installed dll
 from BT_DLL_V1_02 import main_entry                                                                 # type: ignore
 
 ERROR_DICT = {}
